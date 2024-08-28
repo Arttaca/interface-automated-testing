@@ -57,8 +57,7 @@ def test_metamask():
         sb.switch_to_window(4)
         print(sb.get_current_url())
         sb.click('button:contains("Confirm")')
-        sb.sleep(40)
-        # sb.sleep(30)
+        sb.sleep(10)
 
 
 if __name__ == "__main__":
