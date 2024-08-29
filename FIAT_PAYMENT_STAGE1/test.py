@@ -54,9 +54,9 @@ def test_metamask():
         sb.switch_to_window(3)
         # print(sb.get_current_url())
         sb.click('button.css-zjr4b9')
+        sb.sleep(7)
         sb.switch_to_window(4)
         print(sb.get_current_url())
-        sb.sleep(7)
         sb.click('button:contains("Confirm")')
         sb.sleep(20)
 
