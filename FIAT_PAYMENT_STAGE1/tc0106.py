@@ -2,14 +2,7 @@ from seleniumbase import SB
 import seleniumbase
 import time
 import os
-def test_swag_labs():
-    with SB() as self:
-        self.open("https://development.arttaca.io/")
-        self.click('button:contains("Connect")')
-        self.click('button:contains("Connect a wallet")')
-        self.click('button:contains("MetaMask")')
-        time.sleep(5)
-def test_metamask():
+def test_01_06(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
@@ -59,9 +52,17 @@ def test_metamask():
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
         sb.switch_to_window(3)
-
+        sb.sleep(7)
+        sb.sleep(5)
+        sb.open(url)
+        sb.click('button:contains("Buy now")')
+        sb.click('button:contains("Buy with crypto")')
+        sb.sleep(7)
+        sb.switch_to_window(4)
+        sb.click('button:contains("Confirm")')
+        sb.sleep(60)
 
 if __name__ == "__main__":
-    test_metamask()
+    test_01_06("https://development.arttaca.io/nft/single_an_2407/1")
+    #Please insert the correct url
