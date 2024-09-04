@@ -41,7 +41,7 @@ def tc_01_02():
         sb.open_new_window()
         sb.open("https://development.arttaca.io/")
         sb.click('button:contains("Connect")')
-        sb.click('span:contains("Connect a wallet")')
+        sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
         sb.sleep(7)
         sb.switch_to_window(4)

@@ -3,7 +3,7 @@ import seleniumbase
 import time
 import os
 
-def tc_01_04():
+def tc_01_19(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
@@ -39,33 +39,25 @@ def tc_01_04():
         sb.click('input[type="checkbox"]')
         sb.click('p:contains("Sepolia")')
         sb.open_new_window()
-        sb.open("https://development.arttaca.io/")
+        sb.open(url)
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
-        sb.switch_to_window(2)
+        sb.sleep(7)
         sb.switch_to_window(3)
         sb.click('button.css-hnz0pg')
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
-        sb.switch_to_window(3)
-        sb.click('button:contains("Create")')
-        sb.click('span:contains("Mint a NFT to an Existing Collection")')
-        sb.click('span:contains("Select")')
-        sb.type('input#name', "autotest0104")
-        sb.type('textarea#description', "autotestautotestautotestautotest")
-        img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
-        sb.choose_file('input[type="file"]', img_path)
-        sb.click('span:contains("Mint now")')
         sb.sleep(7)
-        sb.switch_to_window(4)
-        sb.click('button:contains("Reject")')
+        sb.switch_to_window(3)
+        sb.click('div.ActionButtons__ButtonBox-sc-1bj8kp4-1.dZzVJr')
+        print(sb.is_text_visible("Burn"))
         sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_04()
+    tc_01_19("https://development.arttaca.io/nft/test-multi2/14")
