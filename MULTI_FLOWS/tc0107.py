@@ -49,7 +49,6 @@ def tc_01_07(url):
         sb.click('button:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(3)
-        print(sb.get_page_source())
         sb.click('button.css-hnz0pg')
         sb.sleep(7)
         sb.switch_to_window(4)
