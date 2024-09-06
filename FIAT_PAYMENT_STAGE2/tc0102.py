@@ -3,11 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_01(url):
+def tc_01_02(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        sb.sleep(5)
+        sb.sleep(7)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
         sb.click('button:contains("Import an existing wallet")')
@@ -60,7 +60,7 @@ def tc_01_01(url):
         sb.sleep(7)
         sb.switch_to_frame('iframe[name="embedded-checkout"]')
         sb.type('input#email',"maianhduong16012004@gmail.com")
-        sb.type('input#cardNumber',"4242 4242 4242 4242")
+        sb.type('input#cardNumber',"4000 0000 0000 9995")
         sb.type('input#cardExpiry',"12/56")
         sb.type('input#cardCvc',"321")
         sb.type('input#billingName',"Mai Anh Duong")
@@ -68,4 +68,4 @@ def tc_01_01(url):
         sb.sleep(60)
 
 if __name__ == "__main__":
-    tc_01_01("https://development.arttaca.io/nft/test0704/1")
+    tc_01_02("https://development.arttaca.io/nft/test0704/1")
