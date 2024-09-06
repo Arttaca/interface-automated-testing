@@ -3,11 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_01(url):
+def tc_01_05(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        sb.sleep(5)
+        sb.sleep(7)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
         sb.click('button:contains("Import an existing wallet")')
@@ -34,11 +34,8 @@ def tc_01_01(url):
         sb.click('button:contains("Got it")')
         sb.click('button:contains("Next")')
         sb.click('button:contains("Done")')
-        sb.sleep(5)
-        sb.click('button[data-testid="network-display"]')
-        sb.click('input[type="checkbox"]')
-        sb.click('p:contains("Sepolia")')
         sb.open_new_window()
+        sb.sleep(7)
         sb.open(url)
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
@@ -68,4 +65,4 @@ def tc_01_01(url):
         sb.sleep(60)
 
 if __name__ == "__main__":
-    tc_01_01("https://development.arttaca.io/nft/test0704/1")
+    tc_01_05("https://development.arttaca.io/nft/test0704/1")
