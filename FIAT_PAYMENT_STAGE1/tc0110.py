@@ -6,6 +6,7 @@ def test_01_10(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/uyenoianhyeuem/1"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -61,7 +62,7 @@ def test_01_10(url):
         sb.click('button:contains("Buy with crypto")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")')
         sb.sleep(7)
         sb.switch_to_window(3)
         sb.sleep(60)
