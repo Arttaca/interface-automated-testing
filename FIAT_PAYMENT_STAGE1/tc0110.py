@@ -2,7 +2,7 @@ from seleniumbase import SB
 import seleniumbase
 import time
 import os
-def test_01_10(url):
+def test_01_10():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
