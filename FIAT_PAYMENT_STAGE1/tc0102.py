@@ -62,6 +62,7 @@ def test_01_02(url):
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
         sb.sleep(60)
+        pass
 
 if __name__ == "__main__":
-    test_01_02("https://development.arttaca.io/nft/hieukkkk/3")
+    test_01_02("https://development.arttaca.io/nft/hieukkkk/5")

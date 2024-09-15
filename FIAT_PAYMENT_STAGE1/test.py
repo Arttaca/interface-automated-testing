@@ -2,13 +2,6 @@ from seleniumbase import SB
 import seleniumbase
 import time
 import os
-def test_swag_labs():
-    with SB() as self:
-        self.open("https://development.arttaca.io/")
-        self.click('button:contains("Connect")')
-        self.click('button:contains("Connect a wallet")')
-        self.click('button:contains("MetaMask")')
-        time.sleep(5)
 def test_metamask():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))

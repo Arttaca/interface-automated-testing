@@ -60,8 +60,9 @@ def test_01_01(url):
         sb.click('button:contains("Buy with crypto")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")')
         sb.sleep(60)
+        pass
 
 if __name__ == "__main__":
-    test_01_01("https://development.arttaca.io/nft/single_an_2407/1")
+    test_01_01("https://development.arttaca.io/nft/test-collection/6")
