@@ -15,4 +15,3 @@ Go to FIAT_PAYMENT_STAGE1 folder:
 ```sh
 python test.py
 ```
-#### Please notice the url when calling function in each test case
