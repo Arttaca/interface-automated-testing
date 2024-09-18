@@ -57,7 +57,7 @@ def tc_01_01():
         sb.click('button:contains("Create")')
         sb.click('span:contains("Mint a NFT to an Existing Collection")')
         sb.click('span:contains("Select")')
-        sb.type('input#name', "autotest0101")
+        sb.type('input#name', "autotest0101-test")
         sb.type('textarea#description', "autotestautotestautotestautotest")
         img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
         sb.choose_file('input[type="file"]', img_path)
