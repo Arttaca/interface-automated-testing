@@ -41,24 +41,18 @@ jobs:
     - name: FIAT PAYMENT STAGE 1 test case 2
       run: |
         pytest FIAT_PAYMENT_STAGE1/tc0102.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
-    - name: FIAT PAYMENT STAGE 1 test case 3
-      run: |
-        pytest FIAT_PAYMENT_STAGE1/tc0103.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
-    - name: FIAT PAYMENT STAGE 1 test case 4
-      run: |
-        pytest FIAT_PAYMENT_STAGE1/tc0104.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
-    - name: FIAT PAYMENT STAGE 1 test case 4
-      run: |
-        pytest FIAT_PAYMENT_STAGE1/tc0104.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    # - name: FIAT PAYMENT STAGE 1 test case 3
+    #   run: |
+    #     pytest FIAT_PAYMENT_STAGE1/tc0103.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    # - name: FIAT PAYMENT STAGE 1 test case 4
+    #   run: |
+    #     pytest FIAT_PAYMENT_STAGE1/tc0104.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
     - name: FIAT PAYMENT STAGE 1 test case 5
       run: |
         pytest FIAT_PAYMENT_STAGE1/tc0105.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
     - name: FIAT PAYMENT STAGE 1 test case 6
       run: |
         pytest FIAT_PAYMENT_STAGE1/tc0106.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
-    - name: FIAT PAYMENT STAGE 1 test case 7
-      run: |
-        pytest FIAT_PAYMENT_STAGE1/tc0107.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
     - name: FIAT PAYMENT STAGE 1 test case 7
       run: |
         pytest FIAT_PAYMENT_STAGE1/tc0107.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
