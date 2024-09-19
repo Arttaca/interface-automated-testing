@@ -64,4 +64,4 @@ jobs:
         pytest FIAT_PAYMENT_STAGE1/tc0109.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
     - name: FIAT PAYMENT STAGE 1 test case 10
       run: |
-        pytest FIAT_PAYMENT_STAGE1/tc0109.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+        pytest FIAT_PAYMENT_STAGE1/tc0110.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
