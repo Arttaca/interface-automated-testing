@@ -58,7 +58,7 @@ def test_01_10():
         sb.switch_to_window(3)
         sb.click('button:contains("Buy now")')
         sb.click('span:contains("Checkout with card")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_frame('iframe[name="embedded-checkout"]')
         sb.type('input#email',"maianhduong16012004@gmail.com")
         sb.type('input#cardNumber',"4242 4242 4242 4242")
