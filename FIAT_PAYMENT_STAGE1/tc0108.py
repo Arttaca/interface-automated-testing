@@ -2,10 +2,11 @@ from seleniumbase import SB
 import seleniumbase
 import time
 import os
-def test_01_08(url):
+def test_01_08():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/datng4/1"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -60,7 +61,7 @@ def test_01_08(url):
         sb.click('button:contains("Buy with crypto")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")')
         sb.sleep(60)
 
 if __name__ == "__main__":
