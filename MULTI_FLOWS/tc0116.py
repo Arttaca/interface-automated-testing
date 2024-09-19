@@ -61,7 +61,7 @@ def tc_01_16(url):
         sb.click('button:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")') #Confirm
         sb.sleep(30)
         
 if __name__ == "__main__":

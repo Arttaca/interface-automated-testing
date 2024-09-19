@@ -56,12 +56,12 @@ def tc_01_05(url):
         sb.sleep(7)
         sb.switch_to_window(3)
         sb.click('button:contains("List Now")')
-        sb.type('input#reservePrice', "0")
+        sb.type('input#reservePrice', "0.0001")
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Cancel")') #Confirm
         sb.sleep(30)
 
 if __name__ == "__main__":

@@ -56,12 +56,12 @@ def tc_01_09(url):
         sb.sleep(7)
         sb.switch_to_window(3)
         sb.click('button:contains("List New")')
-        sb.type("#reservePrice", "0")
+        sb.type("#reservePrice", "0.0001")
         sb.type("#quantity", 1)
         sb.click('button:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Cancel")') #Confirm
         sb.sleep(30)
         
 

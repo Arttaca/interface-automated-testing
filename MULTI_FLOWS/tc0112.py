@@ -59,7 +59,8 @@ def tc_01_12(url):
         sb.click('button:contains("Buy with crypto")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.sleep(10)
+        sb.click('button:contains("Reject")') #Confirm
         sb.sleep(30)
         
 if __name__ == "__main__":

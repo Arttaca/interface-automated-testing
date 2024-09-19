@@ -55,7 +55,7 @@ def tc_01_04():
         sb.click('button:contains("Confirm")')
         sb.switch_to_window(3)
         sb.click('button:contains("Create")')
-        sb.click('span:contains("Mint a NFT to an Existing Collection")')
+        sb.click('span:contains("Add an Artwork to an Existing Series")')
         sb.click('span:contains("Select")')
         sb.type('input#name', "autotest0104")
         sb.type('textarea#description', "autotestautotestautotestautotest")
