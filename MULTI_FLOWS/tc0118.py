@@ -60,7 +60,7 @@ def test_01_18():
         sb.click('button:contains("Burn")')
         sb.type('input#quantity', '1')
         sb.click('span:contains("Confirm")') 
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")') #confirm -> Reject
         sb.sleep(30)

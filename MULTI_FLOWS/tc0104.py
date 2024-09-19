@@ -62,7 +62,7 @@ def test_01_04():
         img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
         sb.choose_file('input[type="file"]', img_path)
         sb.click('span:contains("Mint now")')
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
         sb.sleep(30)

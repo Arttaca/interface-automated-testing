@@ -58,7 +58,7 @@ def test_01_13():
         sb.switch_to_window(3)
         sb.click('button:contains("Buy now")')
         sb.click('button:contains("Buy with crypto")')
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")') #Confirm
         sb.sleep(30)

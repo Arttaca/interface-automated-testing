@@ -62,7 +62,7 @@ def test_01_26():
         sb.click('span:contains("@eternertyy")')
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")') #Confirm -> Reject
         sb.sleep(60)

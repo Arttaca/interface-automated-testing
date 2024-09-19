@@ -61,7 +61,7 @@ def test_01_07():
         sb.type('input#quantity', "3")
         sb.type('input#quantity', "2")
         sb.click('span:contains("Confirm")')
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Cancel")')
         sb.sleep(30)
