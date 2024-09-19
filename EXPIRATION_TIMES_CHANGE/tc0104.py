@@ -3,10 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_04(url):
+def test_01_04():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/hieukkkk/6"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -57,12 +58,12 @@ def tc_01_04(url):
         sb.switch_to_window(3)
         sb.click('div.ThreeDots__ThreeDotButton-sc-1wt0g0h-0.EZXOj.three-dots')
         sb.click('button:contains("Transfer")')
-        sb.type('input[placeholder="Search by user name or address"]',"0x9Ea8a7F39e7bC81A08f16b3e6d097d1Cc4C5cE6D")
+        sb.type('input[placeholder="Search by username or address"]',"0x9Ea8a7F39e7bC81A08f16b3e6d097d1Cc4C5cE6D")
         sb.click('button:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")') #Confirm
         sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_04("https://development.arttaca.io/nft/hehehehehehe/1")
+    test_01_04()

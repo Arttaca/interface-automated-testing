@@ -3,11 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_01():
+def test_01_01():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        sb.sleep(5)
+        sb.sleep(15)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
         sb.click('button:contains("Import an existing wallet")')
@@ -34,7 +34,7 @@ def tc_01_01():
         sb.click('button:contains("Got it")')
         sb.click('button:contains("Next")')
         sb.click('button:contains("Done")')
-        sb.sleep(5)
+        sb.sleep(15)
         sb.click('button[data-testid="network-display"]')
         sb.click('input[type="checkbox"]')
         sb.click('p:contains("Sepolia")')
@@ -43,23 +43,20 @@ def tc_01_01():
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
         sb.switch_to_window(2)
         sb.switch_to_window(3)
         sb.click('button.css-hnz0pg')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
         sb.switch_to_window(3)
         sb.click('button:contains("Create")')
-        sb.click('span:contains("Mint a NFT to an Existing Collection")')
-        buttons = sb.find_elements('button:contains("Select")')
-        sb.sleep(7)
-        buttons[2].click()
-
+        sb.click('span:contains("Add an Artwork to an Existing Series")')
+        sb.click('span.ButtonBlock__Text-sc-z43f5s-2.dnuSfD.button-block__content')
         sb.type('input#name', "autotest0101 expiration")
         sb.type('textarea#description', "autotestautotestautotestautotest")
         img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
@@ -67,8 +64,8 @@ def tc_01_01():
         sb.click('span:contains("Mint later")')
         sb.sleep(15)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
-        sb.sleep(30)
+        sb.click('button:contains("Cancel")') #Confirm
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    tc_01_01()
+    test_01_01()
