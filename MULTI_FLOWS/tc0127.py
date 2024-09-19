@@ -3,10 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_27(url):
+def test_01_27(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/test-multi2/15"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -59,4 +60,4 @@ def tc_01_27(url):
         sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_27("https://development.arttaca.io/nft/test-multi2/15")
+    test_01_27("https://development.arttaca.io/nft/test-multi2/15")
