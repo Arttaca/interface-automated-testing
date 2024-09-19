@@ -57,13 +57,13 @@ def tc_01_23(url):
         sb.switch_to_window(3)
         sb.click('div.ActionButtons__ButtonBox-sc-1bj8kp4-1.dZzVJr')
         sb.click('button:contains("Transfer")')
-        sb.type('input[placeholder="Search by user name or address"]', "Hoang")
+        sb.type('input[placeholder="Search by username or address"]', "Hoang")
         sb.click('span:contains("@eternertyy")')
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
+        sb.click('button:contains("Reject")') #Confirm -> Reject
         sb.sleep(30)
 
 if __name__ == "__main__":
