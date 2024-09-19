@@ -33,8 +33,82 @@ jobs:
       run: |
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Multi-flow test case 1
       run: |
         pytest MULTI_FLOWS/tc0101.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 2
+      run: |
+        pytest MULTI_FLOWS/tc0102.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 3
+      run: |
+        pytest MULTI_FLOWS/test_01_03.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 4
+      run: |
+        pytest MULTI_FLOWS/tc0104.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 5
+      run: |
+        pytest MULTI_FLOWS/tc0105.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 6
+      run: |
+        pytest MULTI_FLOWS/tc0106.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 7
+      run: |
+        pytest MULTI_FLOWS/tc0107.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 8
+      run: |
+        pytest MULTI_FLOWS/tc0108.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 9
+      run: |
+        pytest MULTI_FLOWS/tc0109.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 10
+      run: |
+        pytest MULTI_FLOWS/tc0110.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 11
+      run: |
+        pytest MULTI_FLOWS/tc0111.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 12
+      run: |
+        pytest MULTI_FLOWS/tc0112.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 13
+      run: |
+        pytest MULTI_FLOWS/tc0113.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 14
+      run: |
+        pytest MULTI_FLOWS/tc0114.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 15
+      run: |
+        pytest MULTI_FLOWS/tc0115.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 16
+      run: |
+        pytest MULTI_FLOWS/tc0116.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 17
+      run: |
+        pytest MULTI_FLOWS/tc0117.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 18
+      run: |
+        pytest MULTI_FLOWS/tc0118.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 19
+      run: |
+        pytest MULTI_FLOWS/tc0119.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 20
+      run: |
+        pytest MULTI_FLOWS/tc0120.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 21
+      run: |
+        pytest MULTI_FLOWS/tc0122.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 23
+      run: |
+        pytest MULTI_FLOWS/tc0123.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 24
+      run: |
+        pytest MULTI_FLOWS/tc0124.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 25
+      run: |
+        pytest MULTI_FLOWS/tc0125.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 26
+      run: |
+        pytest MULTI_FLOWS/tc0126.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
+    - name: Multi-flow test case 27
+      run: |
+        pytest MULTI_FLOWS/tc0127.py --browser=chrome --headless -v -s --junit-xml=junit/test-results.xml
