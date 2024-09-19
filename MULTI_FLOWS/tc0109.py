@@ -67,4 +67,4 @@ def test_01_09():
         
 
 if __name__ == "__main__":
-    test_01_09("https://development.arttaca.io/nft/test-multi2/3")
+    test_01_09()
