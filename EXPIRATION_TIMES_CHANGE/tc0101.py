@@ -3,11 +3,10 @@ import seleniumbase
 import time
 import os
 
-def test_01_08():
+def tc_01_01():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        url = "https://development.arttaca.io/nft/test-multi2/14"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -40,7 +39,7 @@ def test_01_08():
         sb.click('input[type="checkbox"]')
         sb.click('p:contains("Sepolia")')
         sb.open_new_window()
-        sb.open(url)
+        sb.open("https://development.arttaca.io/")
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
@@ -48,23 +47,28 @@ def test_01_08():
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
+        sb.switch_to_window(2)
         sb.switch_to_window(3)
         sb.click('button.css-hnz0pg')
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
         sb.switch_to_window(3)
-        sb.click('button:contains("Buy now")')
-        sb.click('span:contains("Checkout with card")')
+        sb.click('button:contains("Create")')
+        sb.click('span:contains("Mint a NFT to an Existing Collection")')
+        buttons = sb.find_elements('button:contains("Select")')
         sb.sleep(7)
-        sb.switch_to_frame('iframe[name="embedded-checkout"]')
-        sb.type('input#email',"maianhduong16012004@gmail.com")
-        sb.type('input#cardNumber',"4242 4242 4242 4242")
-        sb.type('input#cardExpiry',"12/56")
-        sb.type('input#cardCvc',"321")
-        sb.type('input#billingName',"Mai Anh Duong")
+        buttons[2].click()
+
+        sb.type('input#name', "autotest0101 expiration")
+        sb.type('textarea#description', "autotestautotestautotestautotest")
+        img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
+        sb.choose_file('input[type="file"]', img_path)
+        sb.click('span:contains("Mint later")')
+        sb.sleep(15)
+        sb.switch_to_window(4)
+        sb.click('button:contains("Confirm")')
+        sb.sleep(30)
 
 if __name__ == "__main__":
-    test_01_08("https://development.arttaca.io/nft/test-multi2/14")
+    tc_01_01()

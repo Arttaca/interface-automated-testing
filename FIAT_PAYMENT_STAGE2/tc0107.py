@@ -3,10 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_07(url):
+def test_01_07():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/test-multi2/14"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -64,8 +65,6 @@ def tc_01_07(url):
         sb.type('input#cardExpiry',"12/56")
         sb.type('input#cardCvc',"321")
         sb.type('input#billingName',"Mai Anh Duong")
-        sb.click('button[data-testid="hosted-payment-submit-button"]')
-        sb.sleep(60)
 
 if __name__ == "__main__":
-    tc_01_07("https://development.arttaca.io/nft/test-multi2/14")
+    test_01_07("https://development.arttaca.io/nft/test-multi2/14")

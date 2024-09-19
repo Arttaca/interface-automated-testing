@@ -2,12 +2,11 @@ from seleniumbase import SB
 import seleniumbase
 import time
 import os
-
-def test_01_08():
+def test_01_05():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        url = "https://development.arttaca.io/nft/test-multi2/14"
+        url = "https://development.arttaca.io/nft/test-collection/6"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -35,16 +34,20 @@ def test_01_08():
         sb.click('button:contains("Got it")')
         sb.click('button:contains("Next")')
         sb.click('button:contains("Done")')
-        sb.sleep(5)
+        sb.sleep(15)
         sb.click('button[data-testid="network-display"]')
-        sb.click('input[type="checkbox"]')
-        sb.click('p:contains("Sepolia")')
+        sb.click('button:contains("Add network")')
+        buttons = sb.find_elements('button:contains("Add")')
+        buttons[5].click()
+        sb.click('button:contains("Approve")')
+        sb.click('button:contains("Switch to Polygon Mainnet")')
         sb.open_new_window()
-        sb.open(url)
+        sb.sleep(5)
+        sb.open("https://development.arttaca.io/")
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
@@ -54,17 +57,15 @@ def test_01_08():
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
         sb.switch_to_window(3)
+        sb.sleep(5)
+        sb.open(url)
         sb.click('button:contains("Buy now")')
-        sb.click('span:contains("Checkout with card")')
-        sb.sleep(7)
-        sb.switch_to_frame('iframe[name="embedded-checkout"]')
-        sb.type('input#email',"maianhduong16012004@gmail.com")
-        sb.type('input#cardNumber',"4242 4242 4242 4242")
-        sb.type('input#cardExpiry',"12/56")
-        sb.type('input#cardCvc',"321")
-        sb.type('input#billingName',"Mai Anh Duong")
+        sb.click('button:contains("Buy with crypto")')
+        sb.sleep(15)
+        sb.switch_to_window(4)
+        sb.click('button:contains("Cancel")')
 
 if __name__ == "__main__":
-    test_01_08("https://development.arttaca.io/nft/test-multi2/14")
+    test_01_05()
+    #Please insert the correct url

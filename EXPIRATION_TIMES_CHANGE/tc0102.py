@@ -3,11 +3,10 @@ import seleniumbase
 import time
 import os
 
-def test_01_08():
+def tc_01_02(url):
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        url = "https://development.arttaca.io/nft/test-multi2/14"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -56,15 +55,13 @@ def test_01_08():
         sb.click('button:contains("Confirm")')
         sb.sleep(7)
         sb.switch_to_window(3)
-        sb.click('button:contains("Buy now")')
-        sb.click('span:contains("Checkout with card")')
+        sb.click('button:contains("List Now")')
+        sb.type('input#reservePrice', "0.0000001")
+        sb.click('span:contains("Confirm")')
         sb.sleep(7)
-        sb.switch_to_frame('iframe[name="embedded-checkout"]')
-        sb.type('input#email',"maianhduong16012004@gmail.com")
-        sb.type('input#cardNumber',"4242 4242 4242 4242")
-        sb.type('input#cardExpiry',"12/56")
-        sb.type('input#cardCvc',"321")
-        sb.type('input#billingName',"Mai Anh Duong")
+        sb.switch_to_window(4)
+        sb.click('button:contains("Confirm")')
+        sb.sleep(30)
 
 if __name__ == "__main__":
-    test_01_08("https://development.arttaca.io/nft/test-multi2/14")
+    tc_01_02("https://development.arttaca.io/nft/hehehehehehe/3")

@@ -15,3 +15,4 @@ Go to FIAT_PAYMENT_STAGE1 folder:
 ```sh
 python test.py
 ```
+testing
