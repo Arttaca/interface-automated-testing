@@ -3,10 +3,11 @@ import seleniumbase
 import time
 import os
 
-def tc_01_05(url):
+def test_01_05():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
+        url = "https://development.arttaca.io/nft/test-multi2/5"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -43,26 +44,26 @@ def tc_01_05(url):
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(3)
         sb.click('button.css-hnz0pg')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(3)
         sb.click('button:contains("List Now")')
         sb.type('input#reservePrice', "0.0001")
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
-        sb.sleep(7)
+        sb.sleep(17)
         sb.switch_to_window(4)
         sb.click('button:contains("Cancel")') #Confirm
         sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_05("https://development.arttaca.io/nft/test-multi2/5")
+    test_01_05()

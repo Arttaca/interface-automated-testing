@@ -3,7 +3,7 @@ import seleniumbase
 import time
 import os
 
-def tc_01_01():
+def test_01_01():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
@@ -43,14 +43,14 @@ def tc_01_01():
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
         sb.switch_to_window(2)
         sb.switch_to_window(3)
         sb.click('button.css-hnz0pg')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Confirm")')
         sb.switch_to_window(3)
@@ -62,10 +62,9 @@ def tc_01_01():
         img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
         sb.choose_file('input[type="file"]', img_path)
         sb.click('span:contains("Mint later")')
-        sb.sleep(7)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Cancel")') #Confirm
-        sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_01()
+    test_01_01()
