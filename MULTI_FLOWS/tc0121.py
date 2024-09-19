@@ -60,4 +60,4 @@ def tc_01_21(url):
         sb.sleep(30)
 
 if __name__ == "__main__":
-    tc_01_21("https://development.arttaca.io/nft/test-multi2/14")
+    tc_01_21("https://development.arttaca.io/nft/hehehehehehe/2")
