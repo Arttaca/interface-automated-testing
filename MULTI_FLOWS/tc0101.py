@@ -65,7 +65,6 @@ def test_01_01():
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Cancel")') #Confirm
-        sb.sleep(30)
 
 if __name__ == "__main__":
     test_01_01()
