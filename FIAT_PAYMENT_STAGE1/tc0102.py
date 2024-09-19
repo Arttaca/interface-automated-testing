@@ -62,7 +62,6 @@ def test_01_02():
         sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
-        sb.sleep(30)
         pass
 
 if __name__ == "__main__":

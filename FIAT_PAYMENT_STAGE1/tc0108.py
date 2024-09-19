@@ -62,7 +62,6 @@ def test_01_08():
         sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
-        sb.sleep(60)
 
 if __name__ == "__main__":
     test_01_08("https://development.arttaca.io/nft/datng4/1")

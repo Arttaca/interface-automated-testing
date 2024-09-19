@@ -70,7 +70,6 @@ def test_01_09():
         sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
-        sb.sleep(60)
 
 if __name__ == "__main__":
     test_01_09("https://development.arttaca.io/nft/uyenoianhyeuem/1")
