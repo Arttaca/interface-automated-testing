@@ -42,7 +42,7 @@ def test_metamask():
         sb.click('button:contains("Connect")')
         sb.click('span:contains("Connect a Wallet")')
         sb.click('button:contains("MetaMask")')
-        sb.sleep(15)
+        sb.sleep(30)
         sb.switch_to_window(4)
         sb.click('button:contains("Next")')
         sb.click('button:contains("Confirm")')
