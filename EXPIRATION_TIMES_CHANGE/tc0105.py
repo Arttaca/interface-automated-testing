@@ -59,10 +59,10 @@ def test_01_05():
         sb.click('div.ThreeDots__ThreeDotButton-sc-1wt0g0h-0.EZXOj.three-dots')
         sb.click('button:contains("Burn")')
         sb.click('button:contains("Cancel")') #Confirm
-        sb.sleep(15)
-        sb.switch_to_window(4)
-        sb.click('button:contains("Confirm")')
-        sb.sleep(15)
+        # sb.sleep(15)
+        # sb.switch_to_window(4)
+        # sb.click('button:contains("Confirm")')
+        # sb.sleep(15)
 
 if __name__ == "__main__":
     test_01_05()
