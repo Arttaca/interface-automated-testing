@@ -7,7 +7,7 @@ def test_01_04():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        sb.sleep(5)
+        sb.sleep(15)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
         sb.click('button:contains("Import an existing wallet")')
@@ -62,7 +62,7 @@ def test_01_04():
         img_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'img', 'Ed-Sheeran-posing.jpg'))
         sb.choose_file('input[type="file"]', img_path)
         sb.click('span:contains("Mint now")')
-        sb.sleep(17)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")')
         sb.sleep(30)
