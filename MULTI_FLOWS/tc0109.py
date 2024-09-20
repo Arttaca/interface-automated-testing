@@ -56,6 +56,7 @@ def test_01_09():
         sb.click('button:contains("Confirm")')
         sb.sleep(30)
         sb.switch_to_window(3)
+        sb.click(".three-dots")
         sb.click('button:contains("List Now")')
         sb.type("#reservePrice", "0.0001")
         sb.type("#quantity", 1)
