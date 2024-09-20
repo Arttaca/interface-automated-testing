@@ -3,7 +3,7 @@ import seleniumbase
 import time
 import os
 
-def test_01_20(url):
+def test_01_20():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
@@ -59,7 +59,7 @@ def test_01_20(url):
         sb.click('div.ActionButtons__ButtonBox-sc-1bj8kp4-1.dZzVJr')
         sb.click('button:contains("Burn")')
         sb.click('span:contains("Cancel")')
-        sb.sleep(30)
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    test_01_20("https://development.arttaca.io/nft/test-multi2/14")
+    test_01_20()

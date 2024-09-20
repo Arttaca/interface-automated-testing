@@ -7,7 +7,6 @@ def test_01_26():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        url = "https://development.arttaca.io/nft/test-multi2/15"
         sb.sleep(5)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
@@ -62,10 +61,10 @@ def test_01_26():
         sb.click('span:contains("@eternertyy")')
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
-        sb.sleep(17)
+        sb.sleep(7)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")') #Confirm -> Reject
-        sb.sleep(60)
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    test_01_26("https://development.arttaca.io/nft/test-multi2/16")
+    tc_01_26("https://development.arttaca.io/nft/test-multi2/16")

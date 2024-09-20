@@ -62,10 +62,10 @@ def test_01_22():
         sb.click('span:contains("@eternertyy")')
         sb.type('input#quantity', "1")
         sb.click('span:contains("Confirm")')
-        sb.sleep(17)
+        sb.sleep(15)
         sb.switch_to_window(4)
         sb.click('button:contains("Reject")') # Confirm -> Reject
-        sb.sleep(30)
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    test_01_22("https://development.arttaca.io/nft/test-multi2/16")
+    test_01_22()

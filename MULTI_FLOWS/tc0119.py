@@ -58,7 +58,7 @@ def test_01_19():
         sb.switch_to_window(3)
         sb.click('div.ActionButtons__ButtonBox-sc-1bj8kp4-1.dZzVJr')
         print(sb.is_text_visible("Burn"))
-        sb.sleep(30)
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    test_01_19("https://development.arttaca.io/nft/test-multi2/14")
+    test_01_19()

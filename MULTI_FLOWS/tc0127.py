@@ -3,7 +3,7 @@ import seleniumbase
 import time
 import os
 
-def test_01_27(url):
+def test_01_27():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
@@ -57,7 +57,7 @@ def test_01_27(url):
         sb.sleep(15)
         sb.switch_to_window(3)
         print(sb.is_text_visible("Transfer"))
-        sb.sleep(30)
+        sb.sleep(15)
 
 if __name__ == "__main__":
-    test_01_27("https://development.arttaca.io/nft/test-multi2/15")
+    tc_01_27("https://development.arttaca.io/nft/test-multi2/15")
