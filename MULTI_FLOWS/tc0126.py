@@ -68,4 +68,4 @@ def test_01_26():
         sb.sleep(30)
 
 if __name__ == "__main__":
-    test_01_26("https://development.arttaca.io/nft/test-multi2/16")
+    test_01_26()
