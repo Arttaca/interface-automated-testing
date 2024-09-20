@@ -60,10 +60,10 @@ def test_01_16():
         sb.click('button:contains("Burn")')
         sb.type("#quantity", "1")
         sb.click('button:contains("Cancel")') #Confirm
-        sb.sleep(15)
-        sb.switch_to_window(4)
-        sb.click('button:contains("Reject")') #Confirm
-        sb.sleep(30)
+        # sb.sleep(15)
+        # sb.switch_to_window(4)
+        # sb.click('button:contains("Reject")') #Confirm
+        # sb.sleep(30)
         
 if __name__ == "__main__":
     test_01_16()
