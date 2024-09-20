@@ -7,7 +7,8 @@ def test_01_11():
     with SB(
         extension_dir=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'temp', 'metamask-chrome'))
         ) as sb:
-        sb.sleep(5)
+        url = "https://development.arttaca.io/nft/uyenoianhyeuem/1"
+        sb.sleep(15)
         sb.switch_to_window(1)
         sb.click('input[data-testid="onboarding-terms-checkbox"]')
         sb.click('button:contains("Import an existing wallet")')
@@ -34,7 +35,7 @@ def test_01_11():
         sb.click('button:contains("Got it")')
         sb.click('button:contains("Next")')
         sb.click('button:contains("Done")')
-        sb.sleep(5)
+        sb.sleep(15)
         sb.click('button[data-testid="network-display"]')
         sb.click('input[type="checkbox"]')
         sb.click('p:contains("Sepolia")')
